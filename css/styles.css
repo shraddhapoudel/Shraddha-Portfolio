@@ -154,8 +154,8 @@ main { min-height: 60vh; }
   align-items: end;
   padding: clamp(4rem, 8vw, 7rem) 0 0;
 }
-.hero-home .hero-visual { position: relative; overflow: hidden; background: #ddd7cb; }
-.hero-home .hero-visual img { width: 100%; height: min(64vh, 700px); object-fit: cover; }
+.hero-home .hero-visual { position: relative; overflow: hidden; background: #ddd7cb; display: flex; align-items: center; justify-content: center; }
+.hero-home .hero-visual img { width: 100%; height: min(64vh, 700px); object-fit: contain; }
 .hero-home .hero-visual figcaption {
   position: absolute; left: 1rem; bottom: 1rem;
   background: var(--paper); padding: .5rem .75rem;
@@ -190,6 +190,7 @@ main { min-height: 60vh; }
 .project-card:nth-child(even) { grid-template-columns: .65fr 1.35fr; }
 .project-card:nth-child(even) .card-figure { order: 2; }
 .card-figure { margin: 0; overflow: hidden; background: #ddd7cb; }
+.card-figure a, .work-tile .tile-link { display: block; }
 .card-figure img {
   width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
   transition: transform .7s;

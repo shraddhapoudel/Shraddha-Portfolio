@@ -1,4 +1,4 @@
-﻿# Shraddha Poudel · Architecture Portfolio
+# Shraddha Poudel · Architecture Portfolio
 
 Static, multi-page architecture portfolio. Editorial monograph style: paper `#f8f7f4`, ink `#1a1a1a`, accent `#a64f3c`. Manrope (display) + DM Sans (body). No build step, no framework: plain HTML/CSS/JS that runs from a folder.
 
@@ -45,8 +45,8 @@ PDFs compressed with Ghostscript (`gswin64c.exe`): project PDFs 1.8 MB + 1.6 MB,
 
 ## Publish status
 
-- Live site: <https://shraddha1267-blip.github.io/Shraddha-Portfolio/>
-- GitHub repo: <https://github.com/shraddha1267-blip/Shraddha-Portfolio>
+- Live site: <https://shraddhapoudel.github.io/Shraddha-Portfolio/>
+- GitHub repo: <https://github.com/shraddhapoudel/Shraddha-Portfolio>
 - Pages: branch `main`, folder `/ (root)`, deployed from the repo at `C:\Users\Lenovo\Documents\GitHub\Shraddha-Portfolio`
 
 To update the site after publishing: edit files here, open GitHub Desktop, and commit + push. Pages updates automatically (a couple of minutes).
