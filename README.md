@@ -42,17 +42,17 @@ Every image compressed in place (originals backed up separately). Targets: about
 
 PDFs compressed with Ghostscript (`gswin64c.exe`): project PDFs 1.8 MB + 1.6 MB, CV 116 KB. Total site about 8.8 MB (was 363 MB before optimization).
 
-## Publish (GitHub Desktop to Pages)
+## Publish status
 
-1. GitHub Desktop: File → Add local repository → `C:\Users\Lenovo\Desktop\website`
-2. Create repository (public) → Commit to main (check the changes list shows all files)
-3. Publish repository, keep "Keep this code private" unchecked
-4. GitHub (in browser) → repo Settings → Pages → Source: Deploy from a branch → Branch `main`, folder `/ (root)` → Save
-5. Site live at `https://<your-username>.github.io/<repo-name>/`
+- Live site: <https://shraddha1267-blip.github.io/Shraddha-Portfolio/>
+- GitHub repo: <https://github.com/shraddha1267-blip/Shraddha-Portfolio>
+- Pages: branch `main`, folder `/ (root)`, deployed from the repo at `C:\Users\Lenovo\Documents\GitHub\Shraddha-Portfolio`
+
+To update the site after publishing: edit files here, open GitHub Desktop, and commit + push. Pages updates automatically (a couple of minutes).
 
 Checklist after publishing:
 
-- [ ] Update `og:image` URLs in every `<head>` (currently `https://shraddhapoudel.github.io/website/...`) to your real URL
+- [x] `og:image` URLs updated to the live site
 - [ ] Confirm the `EDIT` markers on each project page (team / role)
 - [ ] Add real descriptions to project 04/05 if desired
 - [ ] Add phone / LinkedIn / Instagram in `contact.html` if you want them public
