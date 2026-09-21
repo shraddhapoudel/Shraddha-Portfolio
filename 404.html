@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<a class="skip-link" href="index.html">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header class="site-header">
   <div class="header-inner">
@@ -24,7 +24,7 @@
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="main-nav" id="nav" aria-label="Primary navigation">
       <a href="index.html">HOME</a>
-      <a href="work.html" aria-current="page">WORK</a>
+      <a href="work.html">WORK</a>
       <a href="about.html">ABOUT</a>
       <a href="cv.html">CV</a>
       <a href="contact.html">CONTACT</a>
@@ -44,6 +44,15 @@
 </main>
 
 <footer class="site-footer">
+  <nav class="page-loop" aria-label="Page navigation">
+    <a class="loop-arrow" href="cv.html" aria-label="Previous page: Curriculum Vitae">‹</a>
+    <a class="loop-dot" href="index.html" aria-label="Home">Home</a>
+    <a class="loop-dot" href="work.html" aria-label="Work">Work</a>
+    <a class="loop-dot" href="about.html" aria-label="About">About</a>
+    <a class="loop-dot" href="cv.html" aria-label="Curriculum Vitae">CV</a>
+    <a class="loop-dot" href="contact.html" aria-label="Contact">Contact</a>
+    <a class="loop-arrow" href="index.html" aria-label="Next page: Home">›</a>
+  </nav>
   <div class="footer-inner">
     <div><strong>SHRADDHA POUDEL</strong> · Architecture Portfolio</div>
     <div><a href="mailto:shraddhap023233@nec.edu.np">shraddhap023233@nec.edu.np</a></div>
@@ -51,6 +60,7 @@
   </div>
 </footer>
 
+<script src="js/main.js"></script>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
