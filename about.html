@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About · Shraddha Poudel, Architecture Portfolio</title>
+<meta name="description" content="Shraddha Poudel, architecture student at Nepal Engineering College (Pokhara University), based in Bhaktapur, designing spaces through culture, care, play and community. Seeking an internship.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About · Shraddha Poudel, Architecture Portfolio">
+<meta property="og:description" content="Architecture student designing spaces through culture, care, play and community.">
+<meta property="og:image" content="https://shraddhapoudel.github.io/website/00_Profile_CV/01.portait.jpg">
+<meta name="theme-color" content="#f8f7f4">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html" aria-label="Shraddha Poudel home">
+      <span class="mark">SP</span><span class="full">SHRADDHA POUDEL</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="nav" aria-label="Primary navigation">
+      <a href="index.html">HOME</a>
+      <a href="work.html">WORK</a>
+      <a href="about.html" aria-current="page">ABOUT</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h1 class="display"><span>ABOUT</span></h1>
+      <p class="lead">Shraddha Poudel is an architecture student based in Bhaktapur, designing spaces through culture, care, play and community.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="about-grid">
+        <figure class="about-portrait">
+          <img src="00_Profile_CV/01.portait.jpg" width="749" height="1000" alt="Portrait of Shraddha Poudel" fetchpriority="high">
+        </figure>
+        <div class="about-copy">
+          <p class="opening">I study architecture because I want to know how a building can hold memory, play, care and everyday life, and then learn to build it.</p>
+
+          <p>I'm a Bachelor of Architecture student at Nepal Engineering College (Pokhara University), based in Bhaktapur. Through the design studios I have taken projects from a single idea to a full design: a pre-primary school in Bhaktapur shaped round the protective logic of a rabbit burrow, a cafe in the Kathmandu Valley that is a warm pause on a mountain journey, and साहारा, a rural community centre in Khopasi gathered as a circle of care. Over the year, my work has moved between three scales: the drawing, the detail and the community it serves.</p>
+
+          <p>Alongside the studio, I have supported thesis projects and academic work, and I've taken part in exhibition and publication work with Nec-Ingenium, ASA-Exhibition and PRARAMBH. I draw by hand as often as I model: hand rendering and sketching are where I think most clearly about space.</p>
+
+          <p><strong>What I'm looking for now:</strong> an architecture internship where I can work closely with a design team, on site visits, construction drawings, model-making and visualisation, and learn how architecture gets built, not just imagined. <!-- EDIT: confirm your availability, e.g. "Available from [month] 2026, in Kathmandu or remote." --></p>
+
+          <blockquote class="role-block" style="margin-top:2.5rem">
+            <h3>Position</h3>
+            <p style="margin:0">Architecture, for me, is an exploration of how spaces shape experience, interaction and belonging. I care about buildings that respond to their culture rather than replace it, that make room for play and care, and that serve the community around them.</p>
+          </blockquote>
+        </div>
+      </div>
+
+      <div style="height:clamp(3rem,7vw,6rem)"></div>
+
+      <h2 class="label">Skills</h2>
+      <div class="skill-group reveal">
+        <h3>Drawing &amp; modelling</h3>
+        <ul>
+          <li>AutoCAD <span>Proficient</span></li>
+          <li>SketchUp <span>Working knowledge</span></li>
+          <li>Hand drawing &amp; rendering <span>Proficient</span></li>
+          <li>Physical model-making <span>Working knowledge</span></li>
+        </ul>
+      </div>
+      <!-- EDIT: adjust these honestly to your own levels. -->
+      <div class="skill-group reveal">
+        <h3>Visualisation &amp; graphics</h3>
+        <ul>
+          <li>Enscape <span>Working knowledge</span></li>
+          <li>Adobe Photoshop <span>Working knowledge</span></li>
+          <li>Canva <span>Proficient</span></li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Languages</h3>
+        <ul>
+          <li>Nepali <span>Native</span></li>
+          <li>English <span>Fluent</span></li>
+        </ul>
+      </div>
+      <div class="skill-group reveal">
+        <h3>Site &amp; field experience</h3>
+        <ul>
+          <li>Thesis &amp; studio support</li>
+          <li>Site observation through studios</li>
+          <li>Case study documentation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><strong>SHRADDHA POUDEL</strong> · Architecture Portfolio</div>
+    <div><a href="mailto:shraddhap023233@nec.edu.np">shraddhap023233@nec.edu.np</a></div>
+    <div>© <span id="year"></span> Shraddha Poudel · Bhaktapur, Nepal</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work · Shraddha Poudel, Architecture Portfolio</title>
+<meta name="description" content="Selected architectural work by Shraddha Poudel: a pre-primary school in Bhaktapur, a cafe in the Kathmandu Valley, a rural community centre in Khopasi, interior work and personal sketches.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work · Shraddha Poudel, Architecture Portfolio">
+<meta property="og:description" content="Educational, commercial and community architecture projects by an architecture student in Kathmandu.">
+<meta property="og:image" content="https://shraddhapoudel.github.io/website/01_Nyano_School/01_Cover.jpg">
+<meta name="theme-color" content="#f8f7f4">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="wordmark" href="index.html" aria-label="Shraddha Poudel home">
+      <span class="mark">SP</span><span class="full">SHRADDHA POUDEL</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" id="nav" aria-label="Primary navigation">
+      <a href="index.html">HOME</a>
+      <a href="work.html" aria-current="page">WORK</a>
+      <a href="about.html">ABOUT</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="eyebrow">Selected work · 2024 to 2026</p>
+      <h1 class="display"><span>WORK</span></h1>
+      <p class="lead">Five bodies of work: two institutions, a cafe, a rural community centre, interior portfolios and a personal sketchbook. Each started from a single idea and was carried through drawings, plans and visualisations.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="work-grid">
+        <article class="work-tile reveal">
+          <figure><img src="01_Nyano_School/01_Cover.jpg" width="1600" height="535" alt="Nyano Learning School, a protective pre-primary school in Bhaktapur" loading="lazy" data-lb data-title="Nyano Learning School, the school as a protective learning landscape"></figure>
+          <h2><a href="project-nyano.html">01 · Nyano Learning School</a></h2>
+          <p class="meta">Educational architecture · Bhaktapur · 2026 · Studio VI →</p>
+        </article>
+
+        <article class="work-tile reveal">
+          <figure><img src="02_Himal_Cafe/01_Cover.jpg" width="1600" height="646" alt="Himal Cafe and Bakery, a cafe shaped by Himalayan ridgelines" loading="lazy" data-lb data-title="Himal Cafe and Bakery, a warm pause along the mountain journey"></figure>
+          <h2><a href="project-himal.html">02 · Himal Cafe &amp; Bakery</a></h2>
+          <p class="meta">Commercial · Kathmandu Valley · 2024 · Studio IV →</p>
+        </article>
+
+        <article class="work-tile reveal">
+          <figure><img src="03_Sahara_community_center/01_Cover.jpg" width="1600" height="1132" alt="Sahara Khopasi Rural Community Center, a circle of care in rural Nepal" loading="lazy" data-lb data-title="साहारा, Khopasi Rural Community Center"></figure>
+          <h2><a href="project-sahara.html">03 · साहारा · Khopasi Rural Community Center</a></h2>
+          <p class="meta">Community architecture · Khopasi · 2025 · Studio V →</p>
+        </article>
+
+        <article class="work-tile reveal">
+          <figure><img src="04_Interior_Work/01_Cover.jpg" width="724" height="921" alt="Interior Work, cover of the interior design portfolio" loading="lazy" data-lb data-title="Interior Work, selected interior projects"></figure>
+          <h2><a href="project-interior.html">04 · Interior Work</a></h2>
+          <p class="meta">Interior &amp; academic work · Kathmandu Valley · 2024 · Studio IV →</p>
+        </article>
+
+        <article class="work-tile reveal">
+          <figure><img src="05_Extra_Hobbies_and_work/01_Cover.jpg" width="1143" height="1280" alt="Extra Hobbies and Works, hand rendering, painting and sketching" loading="lazy" data-lb data-title="Extra Hobbies and Works"></figure>
+          <h2><a href="project-hobbies.html">05 · Extra Hobbies &amp; Works</a></h2>
+          <p class="meta">Sketchbook &amp; selected works · Personal →</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div><strong>SHRADDHA POUDEL</strong> · Architecture Portfolio</div>
+    <div><a href="mailto:shraddhap023233@nec.edu.np">shraddhap023233@nec.edu.np</a></div>
+    <div>© <span id="year"></span> Shraddha Poudel · Bhaktapur, Nepal</div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lb-toolbar">
+    <span class="cap" id="lbCaption"></span>
+    <span class="lb-count" id="lbCount"></span>
+    <button id="lbClose" aria-label="Close">✕</button>
+  </div>
+  <div class="lb-stage">
+    <button class="lb-nav prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <img id="lbImage" alt="">
+    <button class="lb-nav next" id="lbNext" aria-label="Next image">›</button>
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
