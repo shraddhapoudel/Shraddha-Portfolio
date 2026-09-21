@@ -33,14 +33,15 @@ Image files were renamed during optimization (`.png` to `.jpg`, `01.portait.jpeg
 
 ## Performance
 
-Every image compressed in place (originals backed up separately). Targets: about 300 KB per image, JPEG re-encode via GDI+. Largest files:
+Images restored from the high-resolution originals (backed up separately): re-encoded to JPEG quality 90 with the long edge capped at 4000 px, so every image stays sharp on screen without the site becoming heavy. Some small original JPGs are kept byte for byte. Largest files:
 
-- `02_Himal_Cafe/03_Materplan.jpg` · 289 KB
-- `03_Sahara_community_center/01_Cover.jpg` · 356 KB
-- `05_Extra_Hobbies_and_work/02_Hand_Rendering.jpg` · 335 KB
-- `05_Extra_Hobbies_and_work/09_Case_Study.jpg` · 311 KB
+- `03_Sahara_community_center/01_Cover.jpg` · 2.25 MB
+- `03_Sahara_community_center/04_Healthcare_Block.jpg` · 1.97 MB
+- `03_Sahara_community_center/03_Masterplan.jpg` · 1.44 MB
+- `05_Extra_Hobbies_and_work/09_Case_Study.jpg` · 1.31 MB
+- `01_Nyano_School/03_Masterplan.jpg` · 1.19 MB
 
-PDFs compressed with Ghostscript (`gswin64c.exe`): project PDFs 1.8 MB + 1.6 MB, CV 116 KB. Total site about 8.8 MB (was 363 MB before optimization).
+PDFs compressed with Ghostscript (`gswin64c.exe`): project PDFs 1.8 MB + 1.6 MB, CV 116 KB. Even higher quality PDFs (from the 48/75 MB originals) can be generated on request, at the cost of download speed. Total site about 20 MB (was 363 MB before optimization).
 
 ## Publish status
 
