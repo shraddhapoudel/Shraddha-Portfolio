@@ -125,6 +125,19 @@
   </section>
 </main>
 
+<div class="cta-popup" id="ctaPopup" role="dialog" aria-label="Grab my CV">
+  <button class="cta-close" id="ctaClose" aria-label="Close">&times;</button>
+  <p class="cta-eyebrow">Hiring an intern?</p>
+  <h3 class="cta-title">Grab my CV</h3>
+  <p class="cta-text">Download the CV, email me, or browse the portfolio.</p>
+  <div class="cta-row">
+    <a class="cta-btn" href="00_Profile_CV/02.CV.pdf" download="">Download CV &darr;</a>
+    <a class="cta-btn cta-ghost" href="mailto:shraddhap023233@nec.edu.np">Email</a>
+  </div>
+  <a class="arrow-link" href="work.html"><span>VIEW PORTFOLIO &rarr;</span></a>
+</div>
+<button class="cta-fab" id="ctaFab" aria-label="Grab my CV">CV &darr;</button>
+
 <footer class="site-footer">
   <div class="footer-inner">
     <div><strong>SHRADDHA POUDEL</strong> · Architecture Portfolio</div>
@@ -135,6 +148,28 @@
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  (function () {
+    var pop = document.getElementById("ctaPopup");
+    var fab = document.getElementById("ctaFab");
+    var close = document.getElementById("ctaClose");
+    if (!pop || !fab || !close) return;
+    var open = function () { pop.classList.add("is-open"); fab.classList.remove("is-open"); };
+    var dismiss = function () {
+      pop.classList.remove("is-open");
+      fab.classList.add("is-open");
+      try { sessionStorage.setItem("ctaDismissed", "1"); } catch (e) {}
+    };
+    close.addEventListener("click", dismiss);
+    fab.addEventListener("click", open);
+    var dismissed = false;
+    try { dismissed = sessionStorage.getItem("ctaDismissed") === "1"; } catch (e) {}
+    if (dismissed) {
+      fab.classList.add("is-open");
+    } else {
+      setTimeout(open, 2400);
+    }
+  })();
 </script>
 <script src="js/main.js"></script>
 </body>
