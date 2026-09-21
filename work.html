@@ -38,32 +38,51 @@
 <main id="main">
   <section class="page-hero">
     <svg class="hero-art" viewBox="0 0 460 330" aria-hidden="true" focusable="false">
-      <g fill="none" stroke="#1a1a1a" stroke-opacity="0.15" stroke-width="1.3">
-        <rect x="26" y="216" width="150" height="94"/>
-        <rect x="42" y="232" width="118" height="62"/>
-        <path d="M42 263h118"/>
-        <path d="M101 216v94"/>
-        <path d="M42 263a19 19 0 0 1 19 -19"/>
-        <path d="M26 263h150 M26 289h150" stroke-opacity="0.09" stroke-dasharray="4 5"/>
-        <path d="M212 150 L270 150 L212 208 Z"/>
-        <path d="M225 150 L212 195 L242 150"/>
-        <path d="M212 166 L246 150"/>
-        <path d="M316 92 L294 172 L338 172 Z"/>
-        <path d="M316 92 L316 70"/>
-        <circle cx="316" cy="64" r="5"/>
-        <path d="M294 172 l-5 16 M338 172 l5 16"/>
-        <path d="M287 192 l8 -6 M345 192 l-8 -6"/>
-        <path d="M300 138 q16 10 32 0" stroke-opacity="0.08"/>
-        <path d="M344 110 l30 14 -14 30 Z"/>
-        <path d="M332 140 h64"/>
+      <g fill="none" stroke="#1a1a1a" stroke-width="1.3">
+        <!-- tracing sheet with construction grid -->
+        <path d="M230 106 h218 v192 h-218 Z" stroke-opacity="0.22" stroke-width="1.6"/>
+        <path d="M230 132 h218 M230 158 h218 M230 184 h218 M230 210 h218 M230 236 h218" stroke-opacity="0.05" stroke-width="1"/>
+        <path d="M258 106 v192 M286 106 v192 M314 106 v192 M342 106 v192 M370 106 v192 M398 106 v192" stroke-opacity="0.05" stroke-width="1"/>
+        <path d="M230 106 L448 296" stroke-opacity="0.07"/>
+        <!-- cafe elevation, ridgeline roof -->
+        <path d="M288 186 L338 154 L388 186" stroke-opacity="0.38" stroke-width="1.7"/>
+        <path d="M288 186 h100 v76 h-100 Z" stroke-opacity="0.32" stroke-width="1.5"/>
+        <path d="M338 154 v-20" stroke-opacity="0.12" stroke-dasharray="3 4"/>
+        <path d="M338 154 L302 120 M338 154 L374 120" stroke-opacity="0.08" stroke-dasharray="5 6"/>
+        <path d="M288 186 l-10 4 v-56 l10 6 M388 186 l10 4 v-56 l-10 6" stroke-opacity="0.15"/>
+        <path d="M310 172 v-34 M366 172 v-34" stroke-opacity="0.1"/>
+        <path d="M302 210 v28 h24 v-28 M330 210 v28 h24 v-28" stroke-opacity="0.26"/>
+        <path d="M302 224 h24 M330 224 h24" stroke-opacity="0.12"/>
+        <path d="M326 238 v22" stroke-opacity="0.2"/>
+        <path d="M286 264 h104 M284 268 h108 M282 272 h112 M280 276 h116" stroke-opacity="0.08" stroke-width="1"/>
+        <!-- dimension line and section mark -->
+        <path d="M300 300 h76 M288 300 h12 M376 300 h12" stroke-opacity="0.22" stroke-width="1.1"/>
+        <path d="M300 296 v8 M376 296 v8" stroke-opacity="0.22" stroke-width="1.1"/>
+        <path d="M300 300 l4 2 l-4 2 M376 300 l-4 2 l4 2" stroke-opacity="0.22" stroke-width="1.1"/>
+        <circle cx="284" cy="140" r="8" stroke-opacity="0.2" stroke-width="1.1"/>
+        <path d="M284 136 v8 M280 140 h8" stroke-opacity="0.2" stroke-width="1.1"/>
+        <!-- drafting compass on the sheet -->
+        <circle cx="388" cy="130" r="20" stroke-opacity="0.26" stroke-width="1.4"/>
+        <circle cx="388" cy="130" r="13" stroke-opacity="0.1"/>
+        <path d="M388 110 v40 M368 130 h40" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="2 4"/>
+        <g class="art-swing">
+          <path d="M388 130 L374 115 M388 130 L402 115" stroke-opacity="0.4" stroke-width="1.5"/>
+          <circle cx="388" cy="130" r="2.6" stroke-opacity="0.55"/>
+        </g>
+        <!-- drafting triangle -->
+        <path d="M170 140 L170 284 L240 284 Z" stroke-opacity="0.3" stroke-width="1.5"/>
+        <path d="M176 146 L176 278 L232 278 Z" stroke-opacity="0.1" stroke-width="1.1"/>
+        <path d="M170 140 L240 284" stroke-opacity="0.2" stroke-width="1.6" stroke-dasharray="1 5"/>
       </g>
-      <g fill="none" stroke="#a64f3c" stroke-opacity="0.42" stroke-width="1.2">
-        <path d="M30 84 L70 46 L106 84 L140 54 L180 84"/>
-        <path d="M70 46 v-12 M140 54 v-12"/>
-        <circle cx="70" cy="28" r="2.6" fill="#a64f3c" stroke="none"/>
-        <circle cx="140" cy="36" r="2.6" fill="#a64f3c" stroke="none"/>
-        <circle cx="420" cy="70" r="2.6" fill="#a64f3c" stroke="none"/>
-        <circle cx="408" cy="88" r="1.8" fill="#a64f3c" stroke="none"/>
+      <g fill="none" stroke="#a64f3c" stroke-width="1.2">
+        <path d="M120 96 L158 62 L196 96 L234 68 L272 96" stroke-opacity="0.5"/>
+        <path d="M146 88 q12 9 24 0 M222 80 q12 9 24 0" stroke-opacity="0.16"/>
+        <circle cx="84" cy="84" r="12" stroke-opacity="0.5" fill="#a64f3c" fill-opacity="0.05"/>
+        <path d="M84 72 v-6 M84 96 v6 M72 84 h-6 M96 84 h6" stroke-opacity="0.18"/>
+        <circle class="art-pulse" cx="102" cy="70" r="2" fill="#a64f3c" stroke="none" opacity="0.6"/>
+        <circle class="art-pulse" cx="212" cy="266" r="1.8" fill="#a64f3c" stroke="none" opacity="0.5" style="animation-delay:1.7s"/>
+        <circle class="art-pulse" cx="356" cy="90" r="1.7" fill="#a64f3c" stroke="none" opacity="0.5" style="animation-delay:2.6s"/>
+        <circle class="art-pulse" cx="440" cy="116" r="1.9" fill="#a64f3c" stroke="none" opacity="0.55" style="animation-delay:.9s"/>
       </g>
     </svg>
     <div class="wrap">
