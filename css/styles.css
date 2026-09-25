@@ -382,6 +382,15 @@ main { min-height: 60vh; }
   padding: .4rem .7rem; border-radius: 2rem;
   pointer-events: none;
 }
+.cad-title {
+  position: absolute; top: 1rem; left: 1rem; z-index: 3;
+  font-size: clamp(.72rem, 1.7vw, .9rem);
+  font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+  color: #23211d; background: rgba(255,255,255,.88);
+  border-bottom: 2px solid #23211d;
+  padding: .5rem .85rem .45rem;
+  pointer-events: none;
+}
 .figure img.lb { cursor: zoom-in; }
 .figure figcaption {
   display: flex; gap: 1.5rem; justify-content: space-between; align-items: baseline;
