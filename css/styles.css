@@ -334,6 +334,16 @@ main { min-height: 60vh; }
 .figure { margin: 0 0 clamp(3.5rem, 7vw, 6rem); }
 .figure img { width: 100%; background: #e5e1d7; cursor: zoom-in; transition: transform .8s cubic-bezier(.22,.61,.36,1); }
 .figure:hover img { transform: scale(1.006); }
+/* tall portrait figures fit a laptop viewport at once; the full-resolution file is untouched */
+@media (min-width: 900px) {
+  .figure > img {
+    max-height: 70vh;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin-inline: auto;
+  }
+}
 .figure img.lb { cursor: zoom-in; }
 .figure figcaption {
   display: flex; gap: 1.5rem; justify-content: space-between; align-items: baseline;
