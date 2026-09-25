@@ -235,6 +235,35 @@
     if (p) p.addEventListener("click", function () { pair.classList.remove("show-back"); });
   });
 
+  /* hero portrait: gentle scroll-linked zoom as the hero leaves the viewport */
+  var portrait = document.querySelector(".hero-home .portrait-zoom");
+  var heroHome = document.querySelector(".hero-home");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (portrait && heroHome && !reduceMotion) {
+    var pTicking = false;
+    function pFrame() {
+      var r = heroHome.getBoundingClientRect();
+      var h = r.height || 1;
+      var p = Math.min(1, Math.max(0, (-r.top) / h));
+      portrait.style.transform = "translate3d(0," + (p * 22).toFixed(1) + "px,0) scale(" + (1.03 + p * 0.05).toFixed(3) + ")";
+      pTicking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!pTicking) { pTicking = true; requestAnimationFrame(pFrame); }
+    }, { passive: true });
+    pFrame();
+  }
+
+  /* when arriving via a category tag link, smooth-scroll and briefly highlight the tile */
+  if (location.hash) {
+    var targetTile = document.querySelector(location.hash);
+    if (targetTile) {
+      targetTile.scrollIntoView({ behavior: "smooth", block: "start" });
+      targetTile.classList.add("hash-highlight");
+      setTimeout(function () { targetTile.classList.remove("hash-highlight"); }, 2200);
+    }
+  }
+
   /* subtle reveal-on-scroll */
   var io = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
