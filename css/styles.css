@@ -336,7 +336,8 @@ main { min-height: 60vh; }
 .figure:hover img { transform: scale(1.006); }
 /* tall portrait figures fit a laptop viewport at once; the full-resolution file is untouched */
 @media (min-width: 900px) {
-  .figure > img {
+  .figure > img,
+  .slide-face > img {
     max-height: 70vh;
     width: auto;
     max-width: 100%;
@@ -344,6 +345,35 @@ main { min-height: 60vh; }
     margin-inline: auto;
   }
 }
+
+/* dual-face drawing: a figure whose back slides in behind the front */
+.slide-pair { display: grid; position: relative; }
+.slide-face {
+  grid-area: 1 / 1; margin: 0; position: relative;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .4s ease, visibility 0s linear .55s;
+}
+.slide-face + .slide-face {
+  transform: translateX(104%); opacity: 0; visibility: hidden; pointer-events: none;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .4s ease, visibility 0s linear .55s;
+}
+.slide-pair.show-back .slide-face:first-child {
+  transform: translateX(-104%); opacity: 0; visibility: hidden; pointer-events: none;
+}
+.slide-pair.show-back .slide-face + .slide-face {
+  transform: translateX(0); opacity: 1; visibility: visible; pointer-events: auto;
+  transition: transform .55s cubic-bezier(.22,.61,.36,1), opacity .4s ease, visibility 0s;
+}
+.slide-btn {
+  position: absolute; right: 1rem; bottom: 1rem; z-index: 3;
+  width: 2.75rem; height: 2.75rem; border-radius: 50%;
+  display: grid; place-items: center;
+  border: 1px solid rgba(255,255,255,.75);
+  background: rgba(20,20,18,.55);
+  color: #fff; font-size: 1.35rem; line-height: 1; cursor: pointer;
+  transition: background .25s ease, transform .25s ease;
+}
+.slide-btn:hover, .slide-btn:focus-visible { background: rgba(20,20,18,.82); transform: scale(1.07); outline: none; }
+.slide-btn:focus-visible { box-shadow: 0 0 0 3px rgba(255,255,255,.55); }
 .figure img.lb { cursor: zoom-in; }
 .figure figcaption {
   display: flex; gap: 1.5rem; justify-content: space-between; align-items: baseline;
@@ -563,6 +593,9 @@ main { min-height: 60vh; }
     opacity: 1; transform: none; filter: none;
     stroke-dashoffset: 0 !important;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slide-face, .slide-btn { transition: none; }
 }
 
 /* ---------- home CTA popup ---------- */

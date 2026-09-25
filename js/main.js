@@ -227,6 +227,14 @@
     });
   }
 
+  /* slide between the two faces of a drawing (plan and its CAD back) */
+  document.querySelectorAll(".slide-pair").forEach(function (pair) {
+    var n = pair.querySelector(".slide-btn.next");
+    var p = pair.querySelector(".slide-btn.prev");
+    if (n) n.addEventListener("click", function () { pair.classList.add("show-back"); });
+    if (p) p.addEventListener("click", function () { pair.classList.remove("show-back"); });
+  });
+
   /* subtle reveal-on-scroll */
   var io = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
     entries.forEach(function (en) {
