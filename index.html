@@ -50,7 +50,7 @@
         </ul>
       </div>
       <figure class="hero-visual">
-        <img src="00_Profile_CV/01.portait.jpg" width="959" height="1280" alt="Portrait of Shraddha Poudel, architecture student in Kathmandu." fetchpriority="high">
+        <img src="00_Profile_CV/01.portait.jpg" width="959" height="1280" alt="Portrait of Shraddha Poudel, architecture student in Kathmandu." fetchpriority="high" data-lb data-title="Portrait of Shraddha Poudel" data-caption="Portrait of Shraddha Poudel, architecture student in Kathmandu.">
         <figcaption>SHRADDHA POUDEL · ARCHITECTURE</figcaption>
       </figure>
     </section>
@@ -154,6 +154,26 @@
     <div>© <span id="year"></span> Shraddha Poudel · Bhaktapur, Nepal</div>
   </div>
 </footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lb-toolbar">
+    <span class="cap" id="lbCaption"></span>
+    <span class="lb-count" id="lbCount"></span>
+    <span class="lb-tools">
+      <button id="lbZoomOut" aria-label="Zoom out">−</button>
+      <button id="lbZoomReset" aria-label="Reset zoom">1:1</button>
+      <button id="lbZoomIn" aria-label="Zoom in">+</button>
+      <button id="lbFull" aria-label="Toggle fullscreen">Full Screen</button>
+      <button id="lbClose" aria-label="Close">✕</button>
+    </span>
+  </div>
+  <div class="lb-stage">
+    <button class="lb-nav prev" id="lbPrev" aria-label="Previous image">‹</button>
+    <img id="lbImage" alt="">
+    <button class="lb-nav next" id="lbNext" aria-label="Next image">›</button>
+    <p class="lb-hint">scroll or pinch to zoom · drag to pan</p>
+  </div>
+</div>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
