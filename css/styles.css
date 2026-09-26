@@ -740,3 +740,71 @@ main { min-height: 60vh; }
   .cv-block { break-inside: avoid; }
   a { color: #000; text-decoration: none; }
 }
+
+/* ============================================================
+   Motion and interaction layer
+   page transitions, scroll progress, cover wipes, word reveals,
+   cursor label, magnetic buttons
+   ============================================================ */
+
+/* page transitions: cross-document View Transitions where supported */
+@view-transition { navigation: auto; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: .32s; animation-timing-function: ease; }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
+
+/* fallback fade-out veil for browsers without View Transitions */
+.page-veil {
+  position: fixed; inset: 0; z-index: 200;
+  background: var(--paper);
+  opacity: 0; pointer-events: none;
+  transition: opacity .26s ease;
+}
+
+/* scroll progress bar on project pages */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; z-index: 160;
+  height: 3px; width: 100%;
+  background: var(--accent);
+  transform: scaleX(0); transform-origin: left top;
+  opacity: .9; pointer-events: none;
+}
+
+/* cover image reveal: one-time left-to-right clip wipe */
+html.js [data-reveal] {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path .9s cubic-bezier(.22,.61,.36,1), transform .9s cubic-bezier(.22,.61,.36,1);
+}
+html.js [data-reveal].is-in { clip-path: inset(0 0 0 0); }
+@media (prefers-reduced-motion: reduce) {
+  html.js [data-reveal] { clip-path: none; transition: none; }
+}
+
+/* word-by-word text reveal */
+[data-split] .w { display: inline-block; opacity: 0; transform: translateY(.5em); }
+[data-split].is-in .w { animation: wordUp .6s cubic-bezier(.22,.61,.36,1) both; animation-delay: calc(var(--i) * 32ms); }
+@keyframes wordUp { from { opacity: 0; transform: translateY(.5em); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  [data-split] .w { animation: none; opacity: 1; transform: none; }
+}
+
+/* cursor-following VIEW label, pointer devices only */
+@media (hover: hover) and (pointer: fine) {
+  .card-cursor {
+    position: fixed; top: 0; left: 0; z-index: 170;
+    width: 76px; height: 76px; border-radius: 50%;
+    background: var(--ink); color: var(--paper);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-1000px, -1000px) scale(.6);
+    transition: transform .18s ease-out, opacity .22s ease;
+  }
+  .card-cursor.is-on { opacity: 1; }
+}
+
+@media print {
+  .scroll-progress, .card-cursor, .page-veil { display: none !important; }
+}
